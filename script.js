@@ -1,7 +1,14 @@
 const products = [
-    { id: 1, name: "Pijama Minnie Rosa", price: 35.90, image: "Products/Pijamas/Pij-Minnie-Pink.jpeg" },
-    { id: 2, name: "Pijama Stitch Rosa", price: 35.90, image: "Products/Pijamas/Pij-Stitch-Pink.jpeg" },
-    { id: 3, name: "Pijama Stitch Vermelho", price: 35.90, image: "Products/Pijamas/Pij-Stitch-Red.jpeg" },
+    { id: 1, name: "Pijama Barbie", price: 45.90, image: "Products/Pijamas/Pij-Barbie-Pink.jpeg" },
+    { id: 2, name: "Pijama Ancora", price: 45.90, image: "Products/Pijamas/Pij-Anchor-Blue.jpeg" },
+    { id: 3, name: "Pijama Pernalonga", price: 45.90, image: "Products/Pijamas/Pij-BugsBunny-Blue.jpeg" },
+    { id: 4, name: "Pijama Olhos", price: 45.90, image: "Products/Pijamas/Pij-CloseEyes-Grey.jpeg" },
+    { id: 5, name: "Pijama Vaquinha", price: 45.90, image: "Products/Pijamas/Pij-Cow-Black.jpeg" },
+    { id: 6, name: "Pijama Flamingo", price: 45.90, image: "Products/Pijamas/Pij-Flemish-Blue.jpeg" },
+    { id: 7, name: "Pijama Girafa", price: 45.90, image: "Products/Pijamas/Pij-Giraffe-Blue.jpeg" },
+    { id: 8, name: "Pijama Panda", price: 45.90, image: "Products/Pijamas/Pij-Panda-Pink.jpeg" },
+    { id: 9, name: "Pijama Melancia", price: 45.90, image: "Products/Pijamas/Pij-WMelon-Grey.jpeg" },
+    { id: 10, name: "Pijama Mulher Maravilha", price: 45.90, image: "Products/Pijamas/Pij-WonderWoman-Red.jpeg" },
 ];
 
 function loadProducts() {
