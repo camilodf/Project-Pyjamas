@@ -9,6 +9,9 @@ const products = [
     { id: 8, name: "Pijama Panda", price: 45.90, image: "Products/Pijamas/Pij-Panda-Pink.jpeg" },
     { id: 9, name: "Pijama Melancia", price: 45.90, image: "Products/Pijamas/Pij-WMelon-Grey.jpeg" },
     { id: 10, name: "Pijama Mulher Maravilha", price: 45.90, image: "Products/Pijamas/Pij-WonderWoman-Red.jpeg" },
+    { id: 11, name: "Pijama Preto", price: 55.90, image: "Products/Pijamas/Pij-Black.jpeg" },
+    { id: 12, name: "Pijama Vermelho", price: 55.90, image: "Products/Pijamas/Pij-Red.jpeg" },
+    { id: 13, name: "Pijama Lilás", price: 55.90, image: "Products/Pijamas/Pij-Purple.jpeg" },
 ];
 
 function loadProducts() {
@@ -16,7 +19,7 @@ function loadProducts() {
     products.forEach(product => {
         productContainer.innerHTML += `
             <div class="product">
-                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.image}" alt="${product.name}" onclick="openModal('${product.image}')">
                 <div class="product-info">
                     <h3>${product.name}</h3>
                     <p>R$ ${product.price.toFixed(2)}</p>
@@ -46,5 +49,26 @@ function sendOrder() {
     const whatsappLink = `https://wa.me/27998979901?text=${encodeURIComponent(orderText)}`;
     window.open(whatsappLink, "_blank");
 }
+
+// Função para abrir o modal com a imagem ampliada
+function openModal(imageSrc) {
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    
+    modal.style.display = "flex";
+    modalImage.src = imageSrc;
+}
+
+// Fechar o modal ao clicar no botão de fechar
+document.querySelector(".close").addEventListener("click", function () {
+    document.getElementById("imageModal").style.display = "none";
+});
+
+// Fechar o modal ao clicar fora da imagem
+document.getElementById("imageModal").addEventListener("click", function (event) {
+    if (event.target === this) {
+        this.style.display = "none";
+    }
+});
 
 loadProducts();

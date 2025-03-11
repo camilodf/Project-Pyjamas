@@ -6,8 +6,6 @@
     <title>Catálogo de Pijamas</title>
 
     <link rel="stylesheet" href="style.css">
-
-    
 </head>
 <body>
     <div class="container">
@@ -15,6 +13,13 @@
         <div id="products"></div>
         <button class="btn" onclick="sendOrder()">Finalizar Pedido</button>
     </div>
+
+    <!-- Modal para exibição da imagem ampliada -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
